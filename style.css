@@ -235,6 +235,149 @@ color:#ffaa00;
 color:#4da6ff;
 }
 
+/* ===== HERO TIER LIST ===== */
+
+.tier-row{
+display:flex;
+margin:10px 0;
+border:2px solid #1f2933;
+border-radius:8px;
+overflow:hidden;
+}
+
+.tier-label{
+width:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+font-weight:bold;
+color:white;
+}
+
+.tier-label.s{
+background:#ff4d4d;
+}
+
+.tier-label.a{
+background:#ff944d;
+}
+
+.tier-label.b{
+background:#ffd24d;
+}
+
+.tier-label.c{
+background:#6fdc6f;
+}
+
+.tier-label.d{
+background:#4da6ff;
+}
+
+.tier{
+flex:1;
+min-height:90px;
+display:flex;
+align-items:center;
+gap:12px;
+padding:10px 15px;
+background:#1f2933;
+flex-wrap:wrap;
+}
+
+.hero-pool{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:25px;
+justify-content:center;
+}
+
+.hero-pool .hero-card{
+width:80px;
+text-align:center;
+background:none;
+padding:5px;
+cursor:grab;
+}
+
+.hero-pool img{
+width:70px;
+height:70px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid #00ffc8;
+display:block;
+margin:auto;
+}
+
+.hero-pool h3{
+font-size:13px;
+margin-top:6px;
+}
+
+.hero-pool img{
+width:70px;
+border-radius:6px;
+cursor:grab;
+}
+
+.hero-pool img:hover{
+transform:scale(1.1);
+}
+
+.tier .hero-card{
+width:80px;
+text-align:center;
+padding:5px;
+background:none;
+box-shadow:none;
+}
+
+.tier .hero-card img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+display:block;
+margin:auto;
+border:2px solid #00ffc8;
+}
+
+.tier .hero-card h3{
+font-size:12px;
+margin-top:5px;
+}
+
+/* hero tier image */
+
+.hero-pool img{
+width:70px;
+height:70px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid #00ffc8;
+}
+
+.tier img{
+width:70px;
+height:70px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid #00ffc8;
+}
+
+.hero-pool img:hover{
+transform:scale(1.1);
+box-shadow:0 0 10px #00ffc8;
+transition:0.2s;
+}
+
+.dragging{
+opacity:0.5;
+}
+
 /* Responsive HP */
 @media (max-width: 768px){
 
