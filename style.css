@@ -235,6 +235,18 @@ color:#ffaa00;
 color:#4da6ff;
 }
 
+.hero-name{
+  color:#f0f7f5ea;   
+  font-weight:bold;
+  margin-top:8px;
+}
+
+.role{
+  color:#00ffc8ea;   
+  font-weight:bold;
+  margin-top:8px;
+}
+
 /* ===== HERO TIER LIST ===== */
 
 .tier-row{
