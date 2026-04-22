@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Marketplace MLBB</title>
+</head>
+
+<body style="background:black; color:white; font-family:sans-serif;">
+
+<h2>Marketplace Akun MLBB</h2>
+
+<!-- tombol post -->
+<button onclick="openForm()" style="margin-bottom:20px;">+ Post Jual Akun</button>
+
+<!-- FORM (hidden) -->
+<div id="formBox" style="display:none; border:1px solid white; padding:10px; width:300px;">
+  <h3>Post Akun</h3>
+
+  <input type="text" id="title" placeholder="Judul"><br><br>
+  <input type="text" id="rank" placeholder="Rank"><br><br>
+  <input type="number" id="price" placeholder="Harga"><br><br>
+  <input type="file" id="image"><br><br>
+  <textarea id="desc" placeholder="Deskripsi"></textarea><br><br>
+
+  <button onclick="uploadPost()">Upload</button>
+  <button onclick="closeForm()">Tutup</button>
+</div>
+
+<hr>
+
+<!-- list marketplace -->
+<div id="list" style="display:flex; flex-wrap:wrap;"></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js";
+
+const firebaseConfig = {
+  apiKey: "API_KEY",
+  authDomain: "PROJECT_ID.firebaseapp.com",
+  projectId: "PROJECT_ID",
+  storageBucket: "PROJECT_ID.appspot.com",
+  appId: "APP_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const storage = getStorage(app);
+
+const list = document.getElementById("list");
+
+// LOAD DATA
+async function loadData() {
+  list.innerHTML = "";
+  const snapshot = await getDocs(collection(db, "posts"));
+
+  snapshot.forEach((doc) => {
+    const data = doc.data();
+
+    list.innerHTML += `
+      <div style="border:1px solid white; margin:10px; padding:10px; width:200px;">
+        <img src="${data.imageUrl}" width="100%"><br><br>
+        <b>${data.title}</b><br>
+        Rank: ${data.rank}<br>
+        Harga: Rp ${data.price}<br><br>
+        <small>${data.desc}</small>
+      </div>
+    `;
+  });
+}
+
+loadData();
+
+// FORM CONTROL
+window.openForm = function() {
+  document.getElementById("formBox").style.display = "block";
+};
+
+window.closeForm = function() {
+  document.getElementById("formBox").style.display = "none";
+};
+
+// UPLOAD POST
+window.uploadPost = async function () {
+  const title = document.getElementById("title").value;
+  const rank = document.getElementById("rank").value;
+  const price = document.getElementById("price").value;
+  const desc = document.getElementById("desc").value;
+  const file = document.getElementById("image").files[0];
+
+  if (!file) return alert("Upload gambar dulu!");
+
+  const storageRef = ref(storage, "images/" + Date.now() + file.name);
+  await uploadBytes(storageRef, file);
+  const imageUrl = await getDownloadURL(storageRef);
+
+  await addDoc(collection(db, "posts"), {
+    title,
+    rank,
+    price,
+    desc,
+    imageUrl,
+    createdAt: new Date()
+  });
+
+  alert("Posting berhasil!");
+
+  closeForm();
+  loadData(); // refresh list
+};
+</script>
+
+</body>
+</html>
