@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTAINER */
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.login-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* TITLE */
+.login-card h2 {
+  color: #00ffd5;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* INPUT */
+.login-card input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+/* BUTTON */
+.btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* PRIMARY */
+.btn.primary {
+  background: #00ffd5;
+  color: black;
+  font-weight: bold;
+}
+
+/* SECONDARY */
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #00ffd5;
+  color: #00ffd5;
+}
+
+/* GOOGLE */
+.btn.google {
+  background: #ffffff;
+  color: black;
+}
+
+/* HOVER */
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* DIVIDER */
+.divider {
+  margin: 15px 0;
+  color: #aaa;
+  font-size: 12px;
+}

@@ -1,118 +1,58 @@
-// SEARCH HERO
-function searchHero() {
+import { initializeApp } 
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 
-let input = document.getElementById("searchHero").value.toLowerCase();
+import { getAuth, onAuthStateChanged, signOut } 
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
-let heroes = document.querySelectorAll(".hero-card");
+const firebaseConfig = {
+  apiKey: "AIzaSyDUDnEkZ5OjpnVzDL8OaPnKqYs4ESsR2x8",
+  authDomain: "mlbbunimus.firebaseapp.com",
+  projectId: "mlbbunimus",
+  storageBucket: "mlbbunimus.firebasestorage.app",
+  messagingSenderId: "121855150863",
+  appId: "1:121855150863:web:91ca0b826068a819d54c7a"
+};
 
-heroes.forEach(function(hero){
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-let name = hero.querySelector("h3").textContent.toLowerCase();
+// ===== AUTH NAVBAR =====
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.getElementById("navAuth");
 
-if(name.includes(input)){
-hero.style.display = "";
-}else{
-hero.style.display = "none";
-}
+  onAuthStateChanged(auth, (user) => {
+    console.log("User:", user);
 
+    if (!nav) return;
+
+    if (user) {
+      nav.innerHTML = `
+        <span>${user.email}</span>
+        <button onclick="logout()">Logout</button>
+      `;
+    } else {
+      nav.innerHTML = `
+        <a href="login.html">Masuk</a>
+        <a href="login.html">Daftar</a>
+      `;
+    }
+  });
 });
 
-}
+window.logout = function(){
+  signOut(auth).then(() => {
+    alert("Logout berhasil");
+    location.reload();
+  });
+};
 
+// ===== SEARCH HERO =====
+window.searchHero = function () {
+  let input = document.getElementById("searchHero").value.toLowerCase();
+  let heroes = document.querySelectorAll(".hero-card");
 
-// DRAG & DROP HERO TIER
-
-// ambil hero
-const heroes = document.querySelectorAll(".hero-card");
-
-// ambil semua area drop (tier + hero pool)
-const dropZones = document.querySelectorAll(".tier, .hero-pool");
-
-heroes.forEach(hero => {
-
-hero.setAttribute("draggable", true);
-
-hero.addEventListener("dragstart", function(){
-this.classList.add("dragging");
-});
-
-hero.addEventListener("dragend", function(){
-this.classList.remove("dragging");
-});
-
-});
-
-
-// semua area bisa menerima drop
-dropZones.forEach(zone => {
-
-zone.addEventListener("dragover", function(e){
-e.preventDefault();
-});
-
-zone.addEventListener("drop", function(){
-
-const hero = document.querySelector(".dragging");
-
-if(hero){
-this.appendChild(hero);
-saveTier();
-}
-
-});
-
-});
-
-function saveTier(){
-
-const tiers = document.querySelectorAll(".tier");
-
-let data = [];
-
-tiers.forEach((tier, index) => {
-
-let heroes = tier.querySelectorAll(".hero-card");
-
-let heroNames = [];
-
-heroes.forEach(hero=>{
-heroNames.push(hero.querySelector("h3").textContent);
-});
-
-data[index] = heroNames;
-
-});
-
-localStorage.setItem("tierData", JSON.stringify(data));
-
-}
-
-function loadTier(){
-
-let saved = localStorage.getItem("tierData");
-
-if(!saved) return;
-
-let data = JSON.parse(saved);
-
-const tiers = document.querySelectorAll(".tier");
-
-data.forEach((heroList, index)=>{
-
-heroList.forEach(name=>{
-
-let hero = [...document.querySelectorAll(".hero-card")].find(h=> 
-h.querySelector("h3").textContent === name
-);
-
-if(hero){
-tiers[index].appendChild(hero);
-}
-
-});
-
-});
-
-}
-
-loadTier();
+  heroes.forEach(hero => {
+    let name = hero.querySelector("h3").textContent.toLowerCase();
+    hero.style.display = name.includes(input) ? "" : "none";
+  });
+};
