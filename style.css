@@ -438,3 +438,39 @@ height:55px;
 padding:4px;
 }
 }
+
+.login-box{
+  width:300px;
+  margin:100px auto;
+  padding:20px;
+  background:#1f2933;
+  border-radius:10px;
+  text-align:center;
+}
+
+.login-box input{
+  width:90%;
+  padding:10px;
+  border:none;
+  border-radius:5px;
+}
+
+.login-box button{
+  padding:10px 15px;
+  margin:5px;
+  border:none;
+  border-radius:5px;
+  background:#00ffc8;
+  cursor:pointer;
+}
+
+.user-menu a{
+  color:white;
+  text-decoration:none;
+  margin-left:15px;
+  cursor:pointer;
+}
+
+.user-menu a:hover{
+  color:#00ffc8;
+}
