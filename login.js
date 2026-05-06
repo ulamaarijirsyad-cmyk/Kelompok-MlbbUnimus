@@ -6,7 +6,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyDUDnEkZ5OjpnVzDL8OaPnKqYs4ESsR2x8",
   authDomain: "mlbbunimus.firebaseapp.com",
   projectId: "mlbbunimus",
-  storageBucket: "mlbbunimus.firebasestorage.app",
+  storageBucket: "mlbbunimus.appspot.com",
   messagingSenderId: "121855150863",
   appId: "1:121855150863:web:91ca0b826068a819d54c7a"
 };

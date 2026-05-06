@@ -101,6 +101,9 @@
   </div>
 
   <div id="list"></div>
+  <div id="loading" class="loading">
+  Loading post...
+</div>
   
 
   <script type="module">
@@ -118,14 +121,14 @@
       getDownloadURL,
     } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js";
 
-    // ⚠️ GANTI DENGAN CONFIG ASLI LU
     const firebaseConfig = {
-      apiKey: "API_KEY",
-      authDomain: "PROJECT_ID.firebaseapp.com",
-      projectId: "PROJECT_ID",
-      storageBucket: "PROJECT_ID.appspot.com",
-      appId: "APP_ID",
-    };
+    apiKey: "AIzaSyDUDnEkZ5OjpnVzDL8OaPnKqYs4ESsR2x8",
+    authDomain: "mlbbunimus.firebaseapp.com",
+    projectId: "mlbbunimus",
+    storageBucket: "mlbbunimus.firebasestorage.app",
+    messagingSenderId: "121855150863",
+    appId: "1:121855150863:web:91ca0b826068a819d54c7a"
+  };
 
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
