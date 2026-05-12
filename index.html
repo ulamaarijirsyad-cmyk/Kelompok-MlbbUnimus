@@ -3,20 +3,26 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>MLBB Item Build Guide | Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLBB Dashboard</title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
   <div class="topbar">
     <div class="page-title">Dashboard</div>
     <div id="navAuth"></div>
   </div>
+
   <div class="container">
+
     <div class="sidebar">
       <h2>MLBB</h2>
+
       <ul>
         <li class="active">Dashboard</li>
         <li><a href="hero-tier.html">Hero Tier</a></li>
@@ -26,74 +32,235 @@
         <li><a href="item-build.html">Item Build</a></li>
       </ul>
     </div>
+
     <div class="main">
+
       <div class="welcome-box">
-        <div class="welcome-badge"><i class="fas fa-chart-line"></i> META INSIGHTS</div>
-        <h1>Welcome to <span class="highlight">mlbb.guide</span></h1>
-        <p class="welcome-desc">Your ultimate resource for Mobile Legends: Bang Bang — real-time draft recommendations, hero guides, and marketplace.</p>
+
+        <div class="welcome-badge">
+          <i class="fas fa-chart-line"></i>
+          META INSIGHTS
+        </div>
+
+        <h1>
+          Welcome to
+          <span class="highlight">mlbb.guide</span>
+        </h1>
+
+        <p class="welcome-desc">
+          Real-time MLBB analytics dashboard.
+        </p>
+
         <div class="patch-stats">
-          <span><i class="fas fa-calendar-alt"></i> Patch 1.9.44</span>
-          <span><i class="fas fa-database"></i> Data based on Mythic+</span>
+          <span>
+            <i class="fas fa-calendar-alt"></i>
+            Patch 1.9.44
+          </span>
+
+          <span>
+            <i class="fas fa-database"></i>
+            MPL Analytics Live
+          </span>
         </div>
+
       </div>
+
       <div class="tools-header">
-        <h3><i class="fas fa-chart-pie"></i> Tools & Analytics</h3>
-        <div class="live-badge"><i class="fas fa-circle" style="font-size: 10px; color: #10b981;"></i> Live</div>
+
+        <h3>
+          <i class="fas fa-chart-pie"></i>
+          Tools & Analytics
+        </h3>
+
+        <div style="display:flex; gap:10px; align-items:center;">
+
+          <button id="updateBtn" class="update-btn">
+            Update MPL Data
+          </button>
+
+          <div class="live-badge">
+            <i class="fas fa-circle" style="font-size:10px;color:#10b981;"></i>
+            Live
+          </div>
+
+        </div>
+
       </div>
+
+      <!-- HERO CARDS -->
+
       <div class="analytics-grid">
+
         <div class="analytics-card">
-          <div class="card-icon"><i class="fas fa-feather-alt"></i></div>
+          <div class="card-icon">
+            <i class="fas fa-feather-alt"></i>
+          </div>
+
           <div class="card-body">
-            <h4>Fanny · Assassin</h4>
-            <div class="winrate">56.0%</div>
-            <div class="trend positive"><i class="fas fa-arrow-up"></i> +2.3% this week</div>
-            <div class="meta-detail">Pick 18.2% | Ban 64%</div>
+            <h4>Loading...</h4>
+            <div class="winrate">--</div>
+            <div class="trend">Loading...</div>
+            <div class="meta-detail">Loading...</div>
             <a href="#" class="explore-link">Explore →</a>
           </div>
         </div>
+
         <div class="analytics-card">
-          <div class="card-icon"><i class="fas fa-dragon"></i></div>
+          <div class="card-icon">
+            <i class="fas fa-dragon"></i>
+          </div>
+
           <div class="card-body">
-            <h4>Yu Zhong · Fighter</h4>
-            <div class="winrate">55.5%</div>
-            <div class="trend positive"><i class="fas fa-arrow-up"></i> +1.7% last 7d</div>
-            <div class="meta-detail">Pick 15.4% | EXP Lane</div>
+            <h4>Loading...</h4>
+            <div class="winrate">--</div>
+            <div class="trend">Loading...</div>
+            <div class="meta-detail">Loading...</div>
             <a href="#" class="explore-link">Explore →</a>
           </div>
         </div>
+
         <div class="analytics-card">
-          <div class="card-icon"><i class="fas fa-skull"></i></div>
+          <div class="card-icon">
+            <i class="fas fa-skull"></i>
+          </div>
+
           <div class="card-body">
-            <h4>Ling · Assassin</h4>
-            <div class="winrate">55.2%</div>
-            <div class="trend neutral"><i class="fas fa-minus"></i> Stable since patch</div>
-            <div class="meta-detail">Pick 12.7% | Jungle main</div>
+            <h4>Loading...</h4>
+            <div class="winrate">--</div>
+            <div class="trend">Loading...</div>
+            <div class="meta-detail">Loading...</div>
             <a href="#" class="explore-link">Explore →</a>
           </div>
         </div>
+
       </div>
+
+      <!-- EXTRA META -->
+
       <div class="extra-meta">
+
         <div class="trending-items">
-          <h4><i class="fas fa-fire"></i> Trending Core Items</h4>
+
+          <h4>
+            <i class="fas fa-fire"></i>
+            Trending Core Items
+          </h4>
+
           <div class="items-list">
-            <div class="item-chip"><span class="item-icon">⚔️</span> War Axe</div>
-            <div class="item-chip"><span class="item-icon">🏹</span> Hunter Strike</div>
-            <div class="item-chip"><span class="item-icon">🔮</span> Genius Wand</div>
+            <div class="item-chip">⚔️ War Axe</div>
+            <div class="item-chip">🏹 Hunter Strike</div>
+            <div class="item-chip">🔮 Genius Wand</div>
+          </div>
+
+        </div>
+
+        <div class="top-wr">
+
+          <h4>
+            <i class="fas fa-chart-line"></i>
+            Highest WR (MPL S15)
+          </h4>
+
+          <ul class="wr-list">
+
+          </ul>
+
+          <div style="text-align:center; margin-top:15px;">
+
+            <button id="toggleWRBtn" class="update-btn">
+              Show More
+            </button>
+
           </div>
         </div>
-        <div class="top-wr">
-          <h4><i class="fas fa-chart-line"></i> Highest WR (Mythic)</h4>
-          <ul class="wr-list">
-            <li><span>1. Fanny</span> <span class="percent">56.0%</span></li>
-            <li><span>2. Yu Zhong</span> <span class="percent">55.5%</span></li>
-            <li><span>3. Ling</span> <span class="percent">55.2%</span></li>
-            <li><span>4. Irithel</span> <span class="percent">54.8%</span></li>
-          </ul>
-        </div>
+
       </div>
+
+      <!-- SEARCH -->
+
+      <div class="meta-search">
+
+        <input type="text" id="heroSearch" placeholder="Search Hero...">
+
+      </div>
+
+      <!-- TABLE -->
+
+      <div class="meta-table-box">
+
+        <h3>
+          <i class="fas fa-trophy"></i>
+          Top 10 Meta Heroes
+        </h3>
+
+        <table class="meta-table">
+
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Hero</th>
+              <th>Pickrate</th>
+              <th>Winrate</th>
+            </tr>
+          </thead>
+
+          <tbody id="metaTableBody">
+
+          </tbody>
+
+        </table>
+
+        <div style="text-align:center; margin-top:20px;">
+
+          <button id="showAllBtn" class="update-btn">
+            Show All Heroes
+          </button>
+
+        </div>
+
+        </table>
+
+      </div>
+
+      <!-- CHART -->
+
+      <div class="chart-box">
+
+        <h3>
+          <i class="fas fa-chart-bar"></i>
+          Hero Winrate Analytics
+        </h3>
+
+        <canvas id="heroChart"></canvas>
+
+      </div>
+
     </div>
+
   </div>
+
+  <!-- MODAL -->
+
+  <div id="heroModal" class="hero-modal">
+
+    <div class="hero-modal-content">
+
+      <span id="closeModal">&times;</span>
+
+      <h2 id="modalHero"></h2>
+
+      <p id="modalPick"></p>
+
+      <p id="modalWR"></p>
+
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <script type="module" src="script.js"></script>
+
 </body>
 
 </html>
