@@ -5,14 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marketplace</title>
 
+ <script src="https://unpkg.com/feather-icons"></script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <h1></h1>
 <body>
-  <div class="topbar">
-    <div class="page-title"><span>ML</span>Guide</div>
-    <div id="navAuth"></div>
-  </div>
+  <nav class="navbar">
+    <h2 class="navbar-title">ML <span>Guide</span></h2>
+
+<div class="navbar-icon">
+  <a href="#" id="search"> <i data-feather="search"></i></a>
+  <a href="#" id="search"> <i data-feather="shopping-cart"></i></a>
+</div>
+
+  </nav>
+  
+  
 
   <div class="container">
 
@@ -29,6 +38,10 @@
         <li><a href="item-build.html">Item Build</a></li>
       </ul>
     </div>
-  
+    
+
+     <script>
+      feather.replace();
+    </script>
 </body>
 </html>
