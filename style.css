@@ -53,31 +53,28 @@ body {
 }
 
 /* navbar marketplace */
-.navbar{
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 7%;
   background-color: rgb(4, 4, 44);
   border-bottom: white 1px solid;
-  
 }
 
-.navbar .navbar-title{
+.navbar .navbar-title {
   font-size: 25px;
   color: gold;
 }
 
-.navbar .navbar-title span{
+.navbar .navbar-title span {
   color: white;
 }
 
-.navbar .navbar-icon a{
+.navbar .navbar-icon a {
   color: #fff;
   margin: 0 0.5rem;
-  
 }
-
 
 .page-title {
   font-size: 18px;
@@ -85,9 +82,9 @@ body {
   font-weight: bold;
 }
 
-.page-title span{
+.page-title span {
   font-size: 18px;
-  color:gold;
+  color: gold;
   font-weight: bold;
 }
 

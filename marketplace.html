@@ -5,31 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marketplace</title>
 
- <script src="https://unpkg.com/feather-icons"></script>
-
+  <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="marketplace.css">
 </head>
-<h1></h1>
+
 <body>
+
+  <!-- NAVBAR -->
   <nav class="navbar">
     <h2 class="navbar-title">ML <span>Guide</span></h2>
 
-<div class="navbar-icon">
-  <a href="#" id="search"> <i data-feather="search"></i></a>
-  <a href="#" id="search"> <i data-feather="shopping-cart"></i></a>
-</div>
-
+    <div class="navbar-icon">
+      <a href="#" id="search"><i data-feather="search"></i></a>
+      <a href="#" id="cart"><i data-feather="shopping-cart"></i></a>
+    </div>
   </nav>
-  
-  
 
   <div class="container">
 
+    <!-- SIDEBAR -->
     <div class="sidebar">
       <h2>MLBB</h2>
 
+      <!-- Menu Navigasi Utama -->
       <ul>
-        
         <li><a href="index.html">Dashboard</a></li>
         <li><a href="hero-tier.html">Hero Tier</a></li>
         <li>Counter Pick</li>
@@ -37,11 +37,292 @@
         <li class="active">Marketplace</li>
         <li><a href="item-build.html">Item Build</a></li>
       </ul>
-    </div>
-    
 
-     <script>
+      <!-- Divider -->
+      <div class="sidebar-divider"></div>
+
+      <!-- Sub-menu Kategori Marketplace -->
+      <p class="sidebar-section-label">Kategori</p>
+      <ul class="sidebar-category">
+        <li class="cat-item active" data-cat="semua">
+          <i data-feather="grid"></i>
+          Semua
+        </li>
+        <li class="cat-item" data-cat="hero">
+          <i data-feather="shield"></i>
+          Hero
+        </li>
+        <li class="cat-item" data-cat="skin">
+          <i data-feather="star"></i>
+          Skin
+        </li>
+        <li class="cat-item" data-cat="akun">
+          <i data-feather="user"></i>
+          Akun
+        </li>
+        <li class="cat-item" data-cat="bundle">
+          <i data-feather="package"></i>
+          Bundle
+        </li>
+        <li class="cat-item" data-cat="event">
+          <i data-feather="zap"></i>
+          Event
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+      <div class="page-header">
+        <div class="page-header-left">
+          <h2 id="categoryTitle">🛒 Semua Item</h2>
+          <p>Temukan hero, skin, akun, dan bundle terbaik</p>
+        </div>
+        <button class="post-btn" onclick="openForm()">
+          <i data-feather="plus"></i> Jual Akun
+        </button>
+      </div>
+
+      <!-- Card List -->
+      <div id="list">
+        <div class="skeleton-card">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line" style="width:70%"></div>
+            <div class="skeleton-line" style="width:40%"></div>
+            <div class="skeleton-line" style="width:90%"></div>
+          </div>
+        </div>
+        <div class="skeleton-card">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line" style="width:60%"></div>
+            <div class="skeleton-line" style="width:35%"></div>
+            <div class="skeleton-line" style="width:80%"></div>
+          </div>
+        </div>
+        <div class="skeleton-card">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line" style="width:75%"></div>
+            <div class="skeleton-line" style="width:45%"></div>
+            <div class="skeleton-line" style="width:85%"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL FORM -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <h3><i data-feather="upload"></i> Post Jual Akun</h3>
+
+      <div class="form-group">
+        <label>Judul Listing</label>
+        <input type="text" id="title" placeholder="cth: Akun Mythic Glory 87 Skin" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Rank</label>
+          <select id="rank">
+            <option value="">Pilih Rank</option>
+            <option value="Mythic">Mythic</option>
+            <option value="Legend">Legend</option>
+            <option value="Epic">Epic</option>
+            <option value="Warrior">Warrior</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Harga (Rp)</label>
+          <input type="number" id="price" placeholder="cth: 500000" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Screenshot Akun</label>
+        <input type="file" id="image" accept="image/*" />
+      </div>
+
+      <div class="form-group">
+        <label>Deskripsi</label>
+        <textarea id="desc" placeholder="Jumlah hero, skin unggulan, info server, dll..."></textarea>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-cancel" onclick="closeForm()">Batal</button>
+        <button class="btn-submit" onclick="uploadPost()">Upload Listing</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initializeApp }
+      from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import {
+      getFirestore, collection, getDocs, addDoc
+    } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+    import {
+      getStorage, ref, uploadBytes, getDownloadURL
+    } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js";
+    import {
+      getAuth, onAuthStateChanged, signOut
+    } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDUDnEkZ5OjpnVzDL8OaPnKqYs4ESsR2x8",
+      authDomain: "mlbbunimus.firebaseapp.com",
+      projectId: "mlbbunimus",
+      storageBucket: "mlbbunimus.firebasestorage.app",
+      messagingSenderId: "121855150863",
+      appId: "1:121855150863:web:91ca0b826068a819d54c7a"
+    };
+
+    const app     = initializeApp(firebaseConfig);
+    const db      = getFirestore(app);
+    const storage = getStorage(app);
+    const auth    = getAuth(app);
+
+    // ── AUTH ──
+    onAuthStateChanged(auth, (user) => {
+      const nav = document.getElementById("navAuth");
+      if (!nav) return;
+      nav.innerHTML = user
+        ? `<span>${user.email}</span><button onclick="window.logout()">Logout</button>`
+        : `<a href="login.html">Masuk</a><a href="register.html">Daftar</a>`;
+    });
+
+    window.logout = () => signOut(auth).then(() => location.reload());
+
+    // ── DATA ──
+    const list = document.getElementById("list");
+    let allData = [];
+    let activeCategory = "semua";
+
+    function formatRupiah(num) {
+      return "Rp " + parseInt(num).toLocaleString("id-ID");
+    }
+
+    function renderCards(data) {
+      list.innerHTML = "";
+      if (data.length === 0) {
+        list.innerHTML = `
+          <div class="state-box">
+            <i data-feather="inbox"></i>
+            <p>Belum ada item untuk kategori ini.</p>
+          </div>`;
+        feather.replace();
+        return;
+      }
+      data.forEach((item) => {
+        const thumb = item.imageUrl
+          ? `<img class="card-thumb" src="${item.imageUrl}" alt="${item.title}">`
+          : `<div class="card-thumb-placeholder">🎮</div>`;
+        list.innerHTML += `
+          <div class="card">
+            ${thumb}
+            <div class="card-body-inner">
+              <p class="card-title">${item.title}</p>
+              <span class="card-rank">${item.rank || item.category || "-"}</span>
+              <p class="card-desc">${item.desc}</p>
+            </div>
+            <div class="card-footer">
+              <span class="card-price">${formatRupiah(item.price)}</span>
+              <button class="btn-beli">Beli</button>
+            </div>
+          </div>`;
+      });
       feather.replace();
-    </script>
+    }
+
+    async function loadData() {
+      list.innerHTML = `
+        <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line" style="width:70%"></div><div class="skeleton-line" style="width:40%"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line" style="width:60%"></div><div class="skeleton-line" style="width:35%"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line" style="width:75%"></div><div class="skeleton-line" style="width:45%"></div></div></div>`;
+
+      const snapshot = await getDocs(collection(db, "posts"));
+      allData = [];
+      snapshot.forEach((doc) => allData.push(doc.data()));
+      applyFilter();
+    }
+
+    function applyFilter() {
+      const filtered = activeCategory === "semua"
+        ? allData
+        : allData.filter(d => (d.category || "akun").toLowerCase() === activeCategory);
+      renderCards(filtered);
+    }
+
+    loadData();
+
+    // ── CATEGORY FILTER ──
+    const categoryLabels = {
+      semua: "🛒 Semua Item",
+      hero:  "⚔️ Hero",
+      skin:  "✨ Skin",
+      akun:  "👤 Akun",
+      bundle:"📦 Bundle",
+      event: "⚡ Event"
+    };
+
+    document.querySelectorAll(".cat-item").forEach(item => {
+      item.addEventListener("click", () => {
+        document.querySelectorAll(".cat-item").forEach(c => c.classList.remove("active"));
+        item.classList.add("active");
+        activeCategory = item.dataset.cat;
+        document.getElementById("categoryTitle").textContent = categoryLabels[activeCategory];
+        applyFilter();
+      });
+    });
+
+    // ── MODAL ──
+    window.openForm  = () => document.getElementById("modalOverlay").classList.add("open");
+    window.closeForm = () => document.getElementById("modalOverlay").classList.remove("open");
+    document.getElementById("modalOverlay").addEventListener("click", function(e) {
+      if (e.target === this) window.closeForm();
+    });
+
+    // ── UPLOAD ──
+    window.uploadPost = async function () {
+      const title = document.getElementById("title").value.trim();
+      const rank  = document.getElementById("rank").value;
+      const price = document.getElementById("price").value;
+      const desc  = document.getElementById("desc").value.trim();
+      const file  = document.getElementById("image").files[0];
+
+      if (!title || !rank || !price || !desc) return alert("Isi semua field dulu!");
+      if (!file) return alert("Upload screenshot dulu!");
+
+      const btn = document.querySelector(".btn-submit");
+      btn.disabled = true;
+      btn.textContent = "Uploading...";
+
+      try {
+        const storageRef = ref(storage, "images/" + Date.now() + "_" + file.name);
+        await uploadBytes(storageRef, file);
+        const imageUrl = await getDownloadURL(storageRef);
+        await addDoc(collection(db, "posts"), {
+          title, rank, price, desc, imageUrl,
+          category: "akun",
+          createdAt: new Date()
+        });
+        alert("Listing berhasil diupload!");
+        window.closeForm();
+        loadData();
+      } catch (err) {
+        alert("Gagal upload: " + err.message);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Upload Listing";
+      }
+    };
+  </script>
+
+  <script>feather.replace();</script>
+
 </body>
 </html>
