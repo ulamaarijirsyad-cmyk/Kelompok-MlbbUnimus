@@ -60,13 +60,6 @@
           <i data-feather="user"></i>
           Akun
         </li>
-        <li class="cat-item" data-cat="bundle">
-          <i data-feather="package"></i>
-          Bundle
-        </li>
-        <li class="cat-item" data-cat="event">
-          <i data-feather="zap"></i>
-          Event
         </li>
       </ul>
     </div>
@@ -77,7 +70,7 @@
       <div class="page-header">
         <div class="page-header-left">
           <h2 id="categoryTitle">🛒 Semua Item</h2>
-          <p>Temukan hero, skin, akun, dan bundle terbaik</p>
+          <p>Temukan hero, skin, dan akun terbaik</p>
         </div>
         <button class="post-btn" onclick="openForm()">
           <i data-feather="plus"></i> Jual Akun
@@ -86,6 +79,26 @@
 
       <!-- Card List -->
       <div id="list">
+
+        <div class="card">
+  <img class="card-thumb"
+       src="https://via.placeholder.com/300x180"
+       alt="Akun ML">
+
+  <div class="card-body-inner">
+    <p class="card-title">Akun Mythic Glory 87 Skin</p>
+    <span class="card-rank">Mythic</span>
+    <p class="card-desc">
+      87 Skin, 130 Hero, 2 Collector, 1 Legend, Bind Aman
+    </p>
+  </div>
+
+  <div class="card-footer">
+    <span class="card-price">Rp 750.000</span>
+    <button class="btn-beli">Beli</button>
+  </div>
+</div>
+
         <div class="skeleton-card">
           <div class="skeleton-thumb"></div>
           <div class="skeleton-body">
@@ -109,6 +122,8 @@
             <div class="skeleton-line" style="width:45%"></div>
             <div class="skeleton-line" style="width:85%"></div>
           </div>
+          </div>
+
         </div>
       </div>
 
@@ -199,7 +214,19 @@
 
     // ── DATA ──
     const list = document.getElementById("list");
-    let allData = [];
+    let allData = [
+      
+  {
+    title: "Akun Mythic Glory 87 Skin",
+    rank: "Mythic",
+    price: 750000,
+    desc: "87 Skin, 130 Hero, 2 Collector, 1 Legend",
+    imageUrl: "https://via.placeholder.com/300x180",
+    category: "akun"
+  },
+  
+]
+    ;
     let activeCategory = "semua";
 
     function formatRupiah(num) {
@@ -238,24 +265,24 @@
       feather.replace();
     }
 
-    async function loadData() {
-      list.innerHTML = `
-        <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line" style="width:70%"></div><div class="skeleton-line" style="width:40%"></div></div></div>
-        <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line" style="width:60%"></div><div class="skeleton-line" style="width:35%"></div></div></div>
-        <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line" style="width:75%"></div><div class="skeleton-line" style="width:45%"></div></div></div>`;
+     function loadData() {
+      // list.innerHTML = `
+      //   <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line" style="width:70%"></div><div class="skeleton-line" style="width:40%"></div></div></div>
+      //   <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line" style="width:60%"></div><div class="skeleton-line" style="width:35%"></div></div></div>
+      //   <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line" style="width:75%"></div><div class="skeleton-line" style="width:45%"></div></div></div>`;
 
-      const snapshot = await getDocs(collection(db, "posts"));
-      allData = [];
-      snapshot.forEach((doc) => allData.push(doc.data()));
-      applyFilter();
-    }
+      // const snapshot = await getDocs(collection(db, "posts"));
+      // allData = [];
+      // snapshot.forEach((doc) => allData.push(doc.data()));
+      // applyFilter();
+     }
 
     function applyFilter() {
-      const filtered = activeCategory === "semua"
-        ? allData
-        : allData.filter(d => (d.category || "akun").toLowerCase() === activeCategory);
-      renderCards(filtered);
-    }
+    //   const filtered = activeCategory === "semua"
+    //     ? allData
+    //     : allData.filter(d => (d.category || "akun").toLowerCase() === activeCategory);
+    //   renderCards(filtered);
+    // }
 
     loadData();
 
