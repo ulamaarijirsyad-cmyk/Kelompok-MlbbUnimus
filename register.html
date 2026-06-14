@@ -2,8 +2,9 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Register</title>
+  <title>Daftar Akun - MLBB Guide</title>
   <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -17,10 +18,24 @@
       <h1>Daftar</h1>
       <p>Buat akun baru MLBB Guide</p>
 
-      <input type="email" id="email" placeholder="Email">
-      <input type="password" id="password" placeholder="Password">
+      <input type="text" id="username" placeholder="Username">
+      
+      <div style="position: relative; width: 100%; margin-bottom: 15px; display: block;">
+        
+        <input type="password" id="password" placeholder="Password" style="width: 100%; padding-right: 45px; box-sizing: border-box; margin-bottom: 0;">
+        
+        <i id="toggleIcon" class="fas fa-eye toggle-password-icon" onclick="togglePassword()" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; font-size: 16px; user-select: none; z-index: 10; margin: 0; padding: 0; color: #666;"></i>
+      
+      </div>
 
       <button onclick="register()">Daftar</button>
+
+      <div class="divider">atau</div>
+
+      <button class="google-btn" onclick="loginGoogle()">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg">
+      <span>Daftar dengan Google</span>
+      </button>
 
       <div class="bottom-text">
         Sudah punya akun?

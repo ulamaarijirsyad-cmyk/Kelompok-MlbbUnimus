@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Saya - MLBB Guide</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .profile-box {
+      background: #0b0f14;
+      padding: 40px 30px;
+      border-radius: 16px;
+      max-width: 480px;
+      margin: 30px auto;
+      text-align: center;
+      border: 1px solid #1f2937;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+    .avatar-container {
+      position: relative;
+      width: 130px;
+      height: 130px;
+      margin: 0 auto 25px;
+    }
+    .avatar-container img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00ffc8;
+      box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
+    }
+    .upload-btn-wrapper {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      background: #00ffc8;
+      color: #000;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      transition: 0.2s;
+    }
+    .upload-btn-wrapper:hover {
+      transform: scale(1.1);
+      background: #00e5b4;
+    }
+    .upload-btn-wrapper input[type=file] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    /* Ganti Tulisan Jadul dengan Badge Ala Game */
+    .badge-status {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      background: rgba(0, 255, 200, 0.1);
+      color: #00ffc8;
+      border: 1px solid rgba(0, 255, 200, 0.3);
+    }
+    .badge-google {
+      background: rgba(66, 133, 244, 0.1);
+      color: #4285f4;
+      border: 1px solid rgba(66, 133, 244, 0.3);
+    }
+    .user-info-text {
+      color: #8892b0;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="page-title">Profil Pengguna</div>
+    <div id="navAuth"></div>
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>MLBB</h2>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="hero-tier.html">Hero Tier</a></li>
+        <li><a href="marketplace.html">Marketplace</a></li>
+        <li><a href="item-build.html">Item Build</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="profile-box">
+        
+        <div class="avatar-container">
+          <img id="userAvatar" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Avatar">
+          
+          <div class="upload-btn-wrapper" id="uploadWrapper">
+            <i class="fas fa-camera"></i>
+            <input type="file" id="fileInput" accept="image/*">
+          </div>
+        </div>
+
+        <h3 id="profileUsername" style="color: #ffffff; font-size: 26px; margin-bottom: 8px; font-weight: bold;">Loading...</h3>
+        
+        <div id="accountBadge" class="badge-status">Verified Member</div>
+
+        <p id="profileEmail" class="user-info-text"></p>
+
+        <button onclick="window.location.href='index.html'" class="update-btn" style="width: 100%; margin-top: 10px;">
+          <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged, updateProfile } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    // UPDATE PENTING: Menggunakan storage v10.12.0 bawaan yang benar
+    import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDUDnEkZ5OjpnVzDL8OaPnKqYs4ESsR2x8",
+      authDomain: "mlbbunimus.firebaseapp.com",
+      projectId: "mlbbunimus",
+      storageBucket: "mlbbunimus.firebasestorage.app", // Menggunakan storage bucket yang sinkron dengan script.js kamu
+      messagingSenderId: "121855150863",
+      appId: "1:121855150863:web:91ca0b826068a819d54c7a"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const storage = getStorage(app);
+
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        alert("Kamu harus login terlebih dahulu!");
+        window.location.href = "login.html";
+        return;
+      }
+
+      // Ambil Nama
+      const username = user.displayName || user.email.split('@')[0];
+      document.getElementById("profileUsername").innerText = username;
+      
+      // Ambil Foto Profil
+      if (user.photoURL) {
+        document.getElementById("userAvatar").src = user.photoURL;
+      }
+
+      // Cek Metode Login (Google atau Dummy/Biasa)
+      const isGoogle = user.providerData.some(p => p.providerId === 'google.com');
+      const badge = document.getElementById("accountBadge");
+      const emailText = document.getElementById("profileEmail");
+
+      if (isGoogle) {
+        badge.innerText = "Google Player";
+        badge.className = "badge-status badge-google";
+        emailText.innerText = user.email;
+        document.getElementById("uploadWrapper").style.display = "none"; // Sembunyikan tombol upload kalau pakai Google
+      } else {
+        badge.innerText = "MLBB Member Account";
+        // Sembunyikan teks email tiruan biar clean
+        emailText.innerText = "ID Pengguna Bawaan";
+      }
+    });
+
+    // PROSES INPUT GAMBAR DARI GALERI
+    document.getElementById("fileInput").addEventListener("change", async (e) => {
+      const file = e.target.files[0];
+      const user = auth.currentUser;
+
+      if (!file || !user) return;
+
+      try {
+        alert("Sedang mengupload foto profil baru...");
+        
+        // Simpan foto di Firebase Storage di folder 'avatars/UID_USER'
+        const storageRef = ref(storage, 'avatars/' + user.uid);
+        await uploadBytes(storageRef, file);
+        
+        // Ambil URL hasil upload
+        const photoURL = await getDownloadURL(storageRef);
+        
+        // Tanam URL foto ke akun user di Firebase Authentication
+        await updateProfile(user, { photoURL: photoURL });
+document.getElementById("userAvatar").src = photoURL + "?t=" + new Date().getTime();
+
+        alert("Foto profil berhasil diperbarui!");
+        window.location.reload(); // Refresh halaman agar navbar pojok kanan juga terupdate fotonya
+      } catch (error) {
+        alert("Gagal mengupload foto: " + error.message);
+        console.error(error);
+      }
+    });
+  </script>
+</body>
+</html>
