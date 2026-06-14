@@ -1023,3 +1023,18 @@ body {
   cursor: pointer;
   font-size: 22px;
 }
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #0b1220;
+  border-bottom: 1px solid #1f2937;
+}
+
+#navAuth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
