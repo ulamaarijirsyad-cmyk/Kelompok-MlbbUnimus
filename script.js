@@ -31,13 +31,17 @@ document.addEventListener("DOMContentLoaded", () => {
       // TRICK: Ambil displayName (Username). 
       // Jika kosong atau berupa email, kita potong teks setelah tanda '@'
       let namaTampilan = user.displayName;
-      
+
       if (!namaTampilan && user.email) {
         namaTampilan = user.email.split('@')[0]; // Ambil tulisan sebelum @
       }
 
       // Ambil foto profil (PP). Jika tidak ada, pakai gambar kosong bawaan
-      const fotoProfil = user.photoURL || "https://cdn-icons-png.flaticon.com/512/149/149071.png";
+      // Ambil foto profil custom per akun
+      const fotoProfil =
+        localStorage.getItem("profilePhoto_" + user.uid) ||
+        user.photoURL ||
+        "https://cdn-icons-png.flaticon.com/512/149/149071.png";
 
       // Tampilkan foto profil mini dan nama user di pojok kanan
       nav.innerHTML = `
@@ -60,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ================= FUNGSI LOGOUT (PERBAIKAN 1) =================
-window.logout = function() {
+window.logout = function () {
   signOut(auth).then(() => {
     alert("Berhasil Logout!");
     window.location.reload(); // Muat ulang halaman setelah logout
@@ -77,7 +81,7 @@ async function loadMPLData() {
   // Cek apakah halaman ini punya tabel "metaTableBody" (berarti ini Dashboard).
   // Jika tidak ada (berarti lagi di Marketplace/Profile), maka STOP eksekusi script ini.
   const tableBody = document.getElementById("metaTableBody");
-  if (!tableBody) return; 
+  if (!tableBody) return;
 
   try {
     const response = await fetch("heroes.json");
