@@ -1,15 +1,3 @@
-// import { initializeApp }
-//       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-//     import {
-//       getFirestore, collection, getDocs, addDoc
-//     } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-//     import {
-//       getStorage, ref, uploadBytes, getDownloadURL
-//     } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js";
-//     import {
-//       getAuth, onAuthStateChanged, signOut
-//     } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-alert("marketplace.js terbaca");
 const firebaseConfig = {
   apiKey: "AIzaSyDUDnEkZ5OjpnVzDL8OaPnKqYs4ESsR2x8",
   authDomain: "mlbbunimus.firebaseapp.com",
@@ -18,22 +6,6 @@ const firebaseConfig = {
   messagingSenderId: "121855150863",
   appId: "1:121855150863:web:91ca0b826068a819d54c7a",
 };
-
-// const app = initializeApp(firebaseConfig);
-// const db = getFirestore(app);
-// const storage = getStorage(app);
-// const auth = getAuth(app);
-
-// ── AUTH ──
-// onAuthStateChanged(auth, (user) => {
-//   const nav = document.getElementById("navAuth");
-//   if (!nav) return;
-//   nav.innerHTML = user
-//     ? `<span>${user.email}</span><button onclick="window.logout()">Logout</button>`
-//     : `<a href="login.html">Masuk</a><a href="register.html">Daftar</a>`;
-// });
-
-// window.logout = () => signOut(auth).then(() => location.reload());
 
 // ── DATA ──
 const list = document.getElementById("list");
@@ -45,6 +17,38 @@ let allData = [
     desc: "87 Skin, 130 Hero, 2 Collector, 1 Legend",
     imageUrl: "https://picsum.photos/300/180",
     category: "akun",
+  },
+  {
+    title: "Skin Collector - Gusion Cosmic Sculptor",
+    rank: "Collector",
+    price: 150000,
+    desc: "Skin collector eksklusif, efek recall & entrance khusus, siap kirim kode redeem",
+    imageUrl: "images/heroes/gusion cosmic.jpg",
+    category: "skin",
+  },
+  {
+    title: "Skin Legend - Alucard Obsidian Blade",
+    rank: "Legend",
+    price: 120000,
+    desc: "Skin legend dengan efek visual premium, cocok untuk push rank",
+    imageUrl: "images/heroes/alucard.jpg",
+    category: "skin",
+  },
+  {
+    title: "Skin Epic - Fanny Blossom Dance",
+    rank: "Epic",
+    price: 45000,
+    desc: "Skin epic populer, desain elegan, garansi kode belum terpakai",
+    imageUrl: "images/heroes/fanny epic.jpg",
+    category: "skin",
+  },
+  {
+    title: "Skin Starlight - Lancelot Starlight Member",
+    rank: "Starlight",
+    price: 65000,
+    desc: "Paket skin starlight bulan ini, termasuk bonus fragment",
+    imageUrl: "images/heroes/lancelot starlight.jpg",
+    category: "skin",
   },
 ];
 let activeCategory = "semua";
@@ -87,10 +91,6 @@ function renderCards(data) {
 
 function loadData() {
   applyFilter();
-  //   const snapshot = await getDocs(collection(db, "posts"));
-  //   allData = [];
-  //   snapshot.forEach((doc) => allData.push(doc.data()));
-  //   applyFilter();
 }
 
 function applyFilter() {
@@ -146,7 +146,7 @@ window.uploadPost = function () {
   const desc = document.getElementById("desc").value.trim();
 
   if (!title || !rank || !price || !desc) {
-    return alert("Isi semua field dulu!");
+    return alert("Lengkapi Data");
   }
 
   allData.push({
@@ -171,43 +171,7 @@ window.uploadPost = function () {
   alert("Listing berhasil ditambahkan!");
 };
 
-// window.uploadPost = async function () {
-//   const title = document.getElementById("title").value.trim();
-//   const rank  = document.getElementById("rank").value;
-//   const price = document.getElementById("price").value;
-//   const desc  = document.getElementById("desc").value.trim();
-//   const file  = document.getElementById("image").files[0];
-
-//   if (!title || !rank || !price || !desc) return alert("Isi semua field dulu!");
-//   if (!file) return alert("Upload screenshot dulu!");
-
-//   const btn = document.querySelector(".btn-submit");
-//   btn.disabled = true;
-//   btn.textContent = "Uploading...";
-
-//   try {
-//     const storageRef = ref(storage, "images/" + Date.now() + "_" + file.name);
-//     await uploadBytes(storageRef, file);
-//     const imageUrl = await getDownloadURL(storageRef);
-//     await addDoc(collection(db, "posts"), {
-//       title, rank, price, desc, imageUrl,
-//       category: "akun",
-//       createdAt: new Date()
-//     });
-//     alert("Listing berhasil diupload!");
-//     window.closeForm();
-//     loadData();
-//   } catch (err) {
-//     alert("Gagal upload: " + err.message);
-//   } finally {
-//     btn.disabled = false;
-//     btn.textContent = "Upload Listing";
-//   }
-// };
-
 loadData();
-
-
 
 const searchBtn = document.getElementById("search");
 const searchBox = document.getElementById("navbarSearch");
