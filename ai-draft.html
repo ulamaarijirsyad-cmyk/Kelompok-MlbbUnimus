@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Draft - MLBB Guide</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ai-draft.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <button id="newChatBtn" class="new-chat-btn">
+
+            <i class="fa-solid fa-plus"></i>
+
+            New Chat
+
+        </button>
+
+        <div class="recent-title">
+
+            Recent Chats
+
+        </div>
+
+        <div id="recentChats" class="recent-list">
+
+            <div class="empty-chat">
+
+                Belum ada chat.
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <main class="main-chat">
+
+        <!-- Header -->
+
+        <header class="chat-header">
+
+            <div>
+
+                <h2>AI Draft</h2>
+
+                <p>MLBB Guide Assistant</p>
+
+            </div>
+
+        </header>
+
+        <!-- Chat -->
+
+        <div class="chat-area" id="chatArea">
+
+            <div class="welcome-screen" id="welcomeScreen">
+
+                <h1>AI Draft</h1>
+
+                <p>
+                    Tanya apa saja seputar draft Mobile Legends.
+                </p>
+
+            </div>
+
+            <!-- Semua chat nanti masuk ke sini -->
+
+            <div id="messages"></div>
+
+        </div>
+
+        <!-- Input -->
+
+        <div class="chat-input">
+
+            <input
+                id="message"
+                type="text"
+                placeholder="Tanyakan draft, counter hero, combo, ban hero..."
+            >
+
+            <button id="sendBtn" class="send-btn">
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script type="module" src="ai-draft.js"></script>
+
+</body>
+
+</html>

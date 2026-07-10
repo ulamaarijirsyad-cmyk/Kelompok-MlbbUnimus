@@ -1,0 +1,62 @@
+[
+  {
+    "hero": "Aamon",
+    "role": "Assassin",
+    "build": [
+      {
+        "name": "Arcane Boots",
+        "image": "images/items/arcane_boots.jpg"
+      },
+      {
+        "name": "Genius Wand",
+        "image": "images/items/genius_wand.png"
+      },
+      {
+        "name": "Holy Crystal",
+        "image": "images/items/holy_crystal.png"
+      },
+      {
+        "name": "Divine Glaive",
+        "image": "images/items/divine_glaive.webp"
+      },
+      {
+        "name": "Feather of Heaven",
+        "image": "images/items/feather_of_heaven.jpg"
+      },
+      {
+        "name": "Blood Wings",
+        "image": "images/items/blood_wings.webp"
+      }
+    ]
+  },
+  {
+    "hero": "Angela",
+    "role": "Support",
+    "build": [
+      {
+        "name": "Magic Shoes",
+      "image": "images/items/magic_shoes.png"
+    },
+    {
+      "name": "Flask of the Oasis",
+      "image": "images/items/flask.png"
+    },
+    {
+      "name": "Fleeting Time",
+      "image": "images/items/fleeting_time.png"
+    },
+    {
+      "name": "Glowing Wand",
+      "image": "images/items/glowing_wand.png"
+    },
+    {
+      "name": "Holy Crystal",
+      "image": "images/items/holy_crystal.png"
+    },
+    {
+      "name": "Immortality",
+      "image": "images/items/immortality.png"
+      }
+    ]
+  }
+]

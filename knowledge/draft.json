@@ -1,0 +1,220 @@
+[
+  {
+    "hero": "Ling",
+
+    "role": "Assassin",
+
+    "lane": "Jungle",
+
+    "first_pick_priority": "Medium",
+
+    "last_pick_priority": "Very High",
+
+    "ban_priority": "High",
+
+    "good_against": [
+      "Layla",
+      "Hanabi",
+      "Novaria",
+      "Cecilion"
+    ],
+
+    "bad_against": [
+      "Khufra",
+      "Franco",
+      "Minsitthar",
+      "Akai"
+    ],
+
+    "synergy": [
+      "Angela",
+      "Floryn",
+      "Mathilda"
+    ],
+
+    "avoid_teammate": [
+      "Hanzo"
+    ],
+
+    "required_team": [
+      "Roamer hard CC",
+      "Gold Lane aman",
+      "EXP inisiator"
+    ],
+
+    "team_weakness": [
+      "Kurang damage magic",
+      "Tidak ada hard CC"
+    ],
+
+    "early_power": "Medium",
+
+    "mid_power": "High",
+
+    "late_power": "Very High",
+
+    "objective": "Fokus buff biru dan Turtle pertama.",
+
+    "draft_notes": "Jangan pick Ling terlalu awal jika lawan belum menunjukkan Jungler karena berpotensi di-counter.",
+
+    "tips": [
+      "Lebih baik dijadikan last pick.",
+      "Pastikan tim memiliki hard CC.",
+      "Hindari pick jika lawan sudah memiliki Khufra."
+    ],
+
+    "community_notes": [
+      {
+        "source": "Pro Player",
+        "information": "Ling lebih sering dipilih pada last pick untuk menghindari counter."
+      }
+    ]
+  },
+
+  {
+  "hero": "Aamon",
+
+  "role": "Assassin",
+
+  "lane": "Jungle",
+
+  "first_pick_priority": "Medium",
+
+  "last_pick_priority": "High",
+
+  "ban_priority": "Medium",
+
+  "good_against": [
+    "Layla",
+    "Hanabi",
+    "Cecilion",
+    "Novaria",
+    "Xavier"
+  ],
+
+  "bad_against": [
+    "Saber",
+    "Kaja",
+    "Franco",
+    "Khufra",
+    "Chou"
+  ],
+
+  "synergy": [
+    "Angela",
+    "Floryn",
+    "Mathilda",
+    "Tigreal"
+  ],
+
+  "avoid_teammate": [
+    "Hanzo"
+  ],
+
+  "required_team": [
+    "Roamer dengan hard crowd control",
+    "EXP Lane sebagai inisiator",
+    "Mage dengan burst atau crowd control"
+  ],
+
+  "team_weakness": [
+    "Kurang frontline",
+    "Tidak memiliki hard crowd control",
+    "Damage magic terlalu sedikit"
+  ],
+
+  "early_power": "Medium",
+
+  "mid_power": "High",
+
+  "late_power": "High",
+
+  "objective": "Fokus farming hingga level 4, amankan Turtle pertama, lalu lakukan pick off terhadap Mage atau Marksman lawan.",
+
+  "draft_notes": "Aamon lebih efektif dipilih setelah lawan menunjukkan hero backline seperti Mage atau Marksman yang minim mobilitas. Hindari memilih terlalu awal jika lawan belum menunjukkan Jungler karena berpotensi di-counter oleh Saber atau Kaja.",
+
+  "tips": [
+    "Lebih baik dipilih sebagai second pick atau last pick.",
+    "Pastikan tim memiliki Tank atau Roamer dengan hard crowd control.",
+    "Prioritaskan mengincar hero backline lawan.",
+    "Hindari draft tanpa hero pembuka teamfight."
+  ],
+
+  "community_notes": [
+    {
+      "source": "Rank Mythic",
+      "information": "Aamon lebih efektif ketika lawan menggunakan Mage atau Marksman dengan mobilitas rendah."
+    },
+    {
+      "source": "Komunitas MLBB",
+      "information": "Aamon sering dijadikan hero snowball karena burst damage yang tinggi pada mid game."
+    },
+    {
+      "source": "Pro Player",
+      "information": "Aamon umumnya dipilih sebagai counter terhadap backline yang tipis dan tidak memiliki banyak crowd control."
+    }
+  ]
+},
+
+  [
+  {
+    "hero": "",
+
+    "role": "",
+
+    "lane": "",
+
+    "first_pick_priority": "",
+
+    "last_pick_priority": "",
+
+    "ban_priority": "",
+
+    "good_against": [
+      ""
+    ],
+
+    "bad_against": [
+      ""
+    ],
+
+    "synergy": [
+      ""
+    ],
+
+    "avoid_teammate": [
+      ""
+    ],
+
+    "required_team": [
+      ""
+    ],
+
+    "team_weakness": [
+      ""
+    ],
+
+    "early_power": "",
+
+    "mid_power": "",
+
+    "late_power": "",
+
+    "objective": "",
+
+    "draft_notes": "",
+
+    "tips": [
+      ""
+    ],
+
+    "community_notes": [
+      {
+        "source": "",
+        "information": ""
+      }
+    ]
+  }
+]
+
+]

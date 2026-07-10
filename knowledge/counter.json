@@ -1,0 +1,313 @@
+[
+  {
+    "hero": "Ling",
+
+    "role": "Assassin",
+
+    "lane": "Jungle",
+
+    "difficulty": "Hard",
+
+    "counter_heroes": [
+      {
+        "hero": "Franco",
+        "reason": "Iron Hook dan Bloody Hunt mampu menghentikan mobilitas Ling."
+      },
+      {
+        "hero": "Khufra",
+        "reason": "Bouncing Ball membuat Ling tidak bisa berpindah dengan bebas."
+      },
+      {
+        "hero": "Minsitthar",
+        "reason": "Ultimate King's Calling membatasi seluruh dash Ling."
+      }
+    ],
+
+    "counter_items": [
+      {
+        "item": "Wind of Nature",
+        "reason": "Menghindari burst physical Ling selama beberapa detik."
+      },
+      {
+        "item": "Antique Cuirass",
+        "reason": "Mengurangi Physical Attack Ling setelah terkena skill."
+      },
+      {
+        "item": "Winter Crown",
+        "reason": "Bisa digunakan untuk menghindari combo ultimate Ling."
+      }
+    ],
+
+    "counter_spells": [
+      {
+        "spell": "Flicker",
+        "reason": "Kabur dari Ultimate Tempest of Blades."
+      },
+      {
+        "spell": "Purify",
+        "reason": "Membantu keluar dari efek crowd control saat teamfight."
+      }
+    ],
+
+    "counter_emblems": [
+      {
+        "emblem": "Tank",
+        "reason": "Lebih kuat menghadapi burst Ling."
+      },
+      {
+        "emblem": "Support",
+        "reason": "Memberikan sustain dan utility untuk tim."
+      }
+    ],
+
+    "recommended_pick": [
+      "Franco",
+      "Khufra",
+      "Minsitthar",
+      "Akai",
+      "Ruby"
+    ],
+
+    "avoid_pick": [
+      "Layla",
+      "Hanabi",
+      "Lesley"
+    ],
+
+    "ban_priority": "High",
+
+    "strengths": [
+      "Mobilitas sangat tinggi",
+      "Rotasi cepat",
+      "Split push kuat",
+      "Burst damage tinggi"
+    ],
+
+    "weaknesses": [
+      "Lemah terhadap hard crowd control",
+      "Sangat bergantung pada buff biru",
+      "Sulit teamfight jika terkena lockdown"
+    ],
+
+    "early_game": "Ganggu buff biru Ling jika memungkinkan. Paksa teamfight sebelum item core selesai.",
+
+    "mid_game": "Selalu bergerak bersama tim dan simpan skill crowd control untuk Ling.",
+
+    "late_game": "Jangan berjalan sendirian. Lindungi Marksman dan Mage agar tidak menjadi target pick off.",
+
+    "combo_counter": "Gunakan Franco Hook atau Khufra Bouncing Ball sebelum Ling masuk menggunakan Ultimate.",
+
+    "positioning": "Backline harus selalu berada dekat Tank atau Support.",
+
+    "teamfight": "Fokus menghentikan Ling lebih dulu sebelum ia menghabisi Hero core.",
+
+    "tips": [
+      "Prioritaskan invade buff biru.",
+      "Jangan gunakan semua skill CC ke Tank.",
+      "Simpan satu hard CC khusus untuk Ling.",
+      "Waspadai flank dari tembok."
+    ],
+
+    "community_notes": [
+      {
+        "source": "Rank Mythic",
+        "information": "Ling biasanya kesulitan ketika buff birunya terus diinvasi."
+      },
+      {
+        "source": "Komunitas MLBB",
+        "information": "Khufra dan Franco merupakan counter yang paling sering direkomendasikan."
+      },
+      {
+        "source": "Pro Player",
+        "information": "Saat menghadapi Ling, tim biasanya menyimpan hero dengan hard CC untuk mengunci pergerakannya."
+      }
+    ],
+
+    "notes": "Knowledge ini disusun berdasarkan pengalaman bermain, komunitas MLBB, serta pertandingan kompetitif dan dapat berubah mengikuti patch."
+  },
+
+  {
+  "hero": "Aamon",
+
+  "role": "Assassin",
+
+  "lane": "Jungle",
+
+  "difficulty": "Hard",
+
+  "counter_heroes": [
+    {
+      "hero": "Saber",
+      "reason": "Ultimate Saber mampu mengunci dan membunuh Aamon sebelum sempat menghilang."
+    },
+    {
+      "hero": "Kaja",
+      "reason": "Divine Judgment dapat menarik Aamon meskipun memiliki mobilitas tinggi."
+    },
+    {
+      "hero": "Franco",
+      "reason": "Hook dan Bloody Hunt sangat efektif menghentikan Aamon."
+    }
+  ],
+
+  "counter_items": [
+    {
+      "item": "Athena's Shield",
+      "reason": "Mengurangi burst Magic Damage Aamon secara signifikan."
+    },
+    {
+      "item": "Radiant Armor",
+      "reason": "Efektif melawan damage magic bertahap dari skill Aamon."
+    },
+    {
+      "item": "Winter Crown",
+      "reason": "Dapat menghindari combo burst Aamon."
+    }
+  ],
+
+  "counter_spells": [
+    {
+      "spell": "Flicker",
+      "reason": "Membantu keluar dari jangkauan combo Aamon."
+    },
+    {
+      "spell": "Purify",
+      "reason": "Membantu bertahan saat terkena inisiasi."
+    }
+  ],
+
+  "counter_emblems": [
+    {
+      "emblem": "Tank",
+      "reason": "Memberikan ketahanan lebih terhadap burst magic."
+    },
+    {
+      "emblem": "Support",
+      "reason": "Memberikan sustain dan utility saat teamfight."
+    }
+  ],
+
+  "recommended_pick": [
+    "Saber",
+    "Kaja",
+    "Franco",
+    "Chou"
+  ],
+
+  "avoid_pick": [
+    "Layla",
+    "Lesley",
+    "Hanabi"
+  ],
+
+  "ban_priority": "Medium",
+
+  "strengths": [
+    "Burst damage sangat tinggi",
+    "Mobilitas tinggi",
+    "Sulit ditarget saat camouflage",
+    "Mudah membunuh backline"
+  ],
+
+  "weaknesses": [
+    "Lemah terhadap suppress",
+    "Lemah terhadap hard crowd control",
+    "Kurang efektif melawan hero tebal dengan Magic Defense"
+  ],
+
+  "early_game": "Prioritaskan farming hingga level 4, lalu lakukan gank ke Gold Lane atau Mid Lane.",
+
+  "mid_game": "Manfaatkan mobilitas untuk mencari pick off terhadap Mage atau Marksman lawan.",
+
+  "late_game": "Masuk teamfight setelah Tank membuka war dan incar hero core lawan.",
+
+  "combo_counter": "Gunakan suppress atau hard crowd control sebelum Aamon sempat menggunakan skill untuk menghilang.",
+
+  "positioning": "Jangan berjalan sendirian dan tetap berada di dekat Tank ketika Aamon belum terlihat di map.",
+
+  "teamfight": "Fokus melindungi Marksman dan Mage dari flank Aamon.",
+
+  "tips": [
+    "Gunakan Athena's Shield jika lawan memiliki Aamon yang kuat.",
+    "Simpan skill crowd control untuk menghentikan Aamon.",
+    "Waspadai serangan dari semak-semak."
+  ],
+
+  "notes": "Knowledge ini disusun berdasarkan pengalaman bermain ranked, komunitas MLBB, serta gameplay kompetitif dan dapat berubah mengikuti patch."
+},
+
+  {
+  "hero": "",
+
+  "role": "",
+
+  "lane": "",
+
+  "difficulty": "",
+
+  "counter_heroes": [
+    {
+      "hero": "",
+      "reason": ""
+    }
+  ],
+
+  "counter_items": [
+    {
+      "item": "",
+      "reason": ""
+    }
+  ],
+
+  "counter_spells": [
+    {
+      "spell": "",
+      "reason": ""
+    }
+  ],
+
+  "counter_emblems": [
+    {
+      "emblem": "",
+      "reason": ""
+    }
+  ],
+
+  "recommended_pick": [
+    ""
+  ],
+
+  "avoid_pick": [
+    ""
+  ],
+
+  "ban_priority": "",
+
+  "strengths": [
+    ""
+  ],
+
+  "weaknesses": [
+    ""
+  ],
+
+  "early_game": "",
+
+  "mid_game": "",
+
+  "late_game": "",
+
+  "combo_counter": "",
+
+  "positioning": "",
+
+  "teamfight": "",
+
+  "tips": [
+    ""
+  ],
+
+  "notes": ""
+}
+
+]

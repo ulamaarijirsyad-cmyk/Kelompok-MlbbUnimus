@@ -1,0 +1,117 @@
+[
+{
+  "hero": "Aamon",
+
+  "role": "Assassin",
+
+  "lane": "Jungle",
+
+  "specialty": "Burst / Chase",
+
+  "difficulty": "Hard",
+
+  "description": "Aamon adalah hero Assassin dengan burst magic damage tinggi yang mampu menghilang menggunakan camouflage dan menghabisi hero backline dengan cepat.",
+
+  "best_spell": "Retribution",
+
+  "best_emblem": "Assassin",
+
+  "power_spike": "Mulai kuat setelah mendapatkan Genius Wand dan Holy Crystal.",
+
+  "skill_priority": [
+    "Ultimate",
+    "Skill 2",
+    "Skill 1"
+  ],
+
+  "combo": "Skill 1 → Skill 2 → Basic Attack → Ultimate → Basic Attack.",
+
+  "rotation": "Mulai dari buff biru, lanjut buff merah, Lithowanderer, Turtle, kemudian rotasi ke Gold Lane atau Mid Lane.",
+
+  "early_game": "Fokus farming hingga level 4 dan hindari teamfight yang tidak perlu.",
+
+  "mid_game": "Mulai aktif melakukan gank dan incar Mage atau Marksman lawan yang sendirian.",
+
+  "late_game": "Masuk setelah Tank membuka war dan fokus menghabisi hero backline lawan.",
+
+  "pros": [
+    "Burst magic damage sangat tinggi",
+    "Mobilitas tinggi",
+    "Mudah melakukan pick off",
+    "Sulit ditarget saat camouflage"
+  ],
+
+  "cons": [
+    "Lemah terhadap suppress",
+    "Lemah terhadap hard crowd control",
+    "Kurang efektif melawan hero dengan Magic Defense tinggi"
+  ],
+
+  "tips": [
+    "Jangan membuka teamfight sendirian.",
+    "Manfaatkan semak-semak sebelum melakukan combo.",
+    "Prioritaskan Marksman atau Mage sebagai target.",
+    "Pastikan stack shard penuh sebelum menggunakan Ultimate."
+  ],
+
+  "mistakes": [
+    "Masuk teamfight terlalu cepat.",
+    "Menggunakan Ultimate tanpa stack yang cukup.",
+    "Mengincar Tank dibanding hero backline.",
+    "Memaksakan duel saat buff belum selesai."
+  ]
+},
+
+{
+  "hero": "",
+
+  "role": "",
+
+  "lane": "",
+
+  "specialty": "",
+
+  "difficulty": "",
+
+  "description": "",
+
+  "best_spell": "",
+
+  "best_emblem": "",
+
+  "power_spike": "",
+
+  "skill_priority": [
+    "",
+    "",
+    ""
+  ],
+
+  "combo": "",
+
+  "rotation": "",
+
+  "early_game": "",
+
+  "mid_game": "",
+
+  "late_game": "",
+
+  "pros": [
+    ""
+  ],
+
+  "cons": [
+    ""
+  ],
+
+  "tips": [
+    ""
+  ],
+
+  "mistakes": [
+    ""
+  ]
+}
+
+]
