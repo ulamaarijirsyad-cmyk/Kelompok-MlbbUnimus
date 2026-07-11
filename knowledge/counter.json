@@ -1,132 +1,5 @@
 [
   {
-    "hero": "Ling",
-
-    "role": "Assassin",
-
-    "lane": "Jungle",
-
-    "difficulty": "Hard",
-
-    "counter_heroes": [
-      {
-        "hero": "Franco",
-        "reason": "Iron Hook dan Bloody Hunt mampu menghentikan mobilitas Ling."
-      },
-      {
-        "hero": "Khufra",
-        "reason": "Bouncing Ball membuat Ling tidak bisa berpindah dengan bebas."
-      },
-      {
-        "hero": "Minsitthar",
-        "reason": "Ultimate King's Calling membatasi seluruh dash Ling."
-      }
-    ],
-
-    "counter_items": [
-      {
-        "item": "Wind of Nature",
-        "reason": "Menghindari burst physical Ling selama beberapa detik."
-      },
-      {
-        "item": "Antique Cuirass",
-        "reason": "Mengurangi Physical Attack Ling setelah terkena skill."
-      },
-      {
-        "item": "Winter Crown",
-        "reason": "Bisa digunakan untuk menghindari combo ultimate Ling."
-      }
-    ],
-
-    "counter_spells": [
-      {
-        "spell": "Flicker",
-        "reason": "Kabur dari Ultimate Tempest of Blades."
-      },
-      {
-        "spell": "Purify",
-        "reason": "Membantu keluar dari efek crowd control saat teamfight."
-      }
-    ],
-
-    "counter_emblems": [
-      {
-        "emblem": "Tank",
-        "reason": "Lebih kuat menghadapi burst Ling."
-      },
-      {
-        "emblem": "Support",
-        "reason": "Memberikan sustain dan utility untuk tim."
-      }
-    ],
-
-    "recommended_pick": [
-      "Franco",
-      "Khufra",
-      "Minsitthar",
-      "Akai",
-      "Ruby"
-    ],
-
-    "avoid_pick": [
-      "Layla",
-      "Hanabi",
-      "Lesley"
-    ],
-
-    "ban_priority": "High",
-
-    "strengths": [
-      "Mobilitas sangat tinggi",
-      "Rotasi cepat",
-      "Split push kuat",
-      "Burst damage tinggi"
-    ],
-
-    "weaknesses": [
-      "Lemah terhadap hard crowd control",
-      "Sangat bergantung pada buff biru",
-      "Sulit teamfight jika terkena lockdown"
-    ],
-
-    "early_game": "Ganggu buff biru Ling jika memungkinkan. Paksa teamfight sebelum item core selesai.",
-
-    "mid_game": "Selalu bergerak bersama tim dan simpan skill crowd control untuk Ling.",
-
-    "late_game": "Jangan berjalan sendirian. Lindungi Marksman dan Mage agar tidak menjadi target pick off.",
-
-    "combo_counter": "Gunakan Franco Hook atau Khufra Bouncing Ball sebelum Ling masuk menggunakan Ultimate.",
-
-    "positioning": "Backline harus selalu berada dekat Tank atau Support.",
-
-    "teamfight": "Fokus menghentikan Ling lebih dulu sebelum ia menghabisi Hero core.",
-
-    "tips": [
-      "Prioritaskan invade buff biru.",
-      "Jangan gunakan semua skill CC ke Tank.",
-      "Simpan satu hard CC khusus untuk Ling.",
-      "Waspadai flank dari tembok."
-    ],
-
-    "community_notes": [
-      {
-        "source": "Rank Mythic",
-        "information": "Ling biasanya kesulitan ketika buff birunya terus diinvasi."
-      },
-      {
-        "source": "Komunitas MLBB",
-        "information": "Khufra dan Franco merupakan counter yang paling sering direkomendasikan."
-      },
-      {
-        "source": "Pro Player",
-        "information": "Saat menghadapi Ling, tim biasanya menyimpan hero dengan hard CC untuk mengunci pergerakannya."
-      }
-    ],
-
-    "notes": "Knowledge ini disusun berdasarkan pengalaman bermain, komunitas MLBB, serta pertandingan kompetitif dan dapat berubah mengikuti patch."
-  },
-
-  {
   "hero": "Aamon",
 
   "role": "Assassin",
@@ -138,103 +11,587 @@
   "counter_heroes": [
     {
       "hero": "Saber",
-      "reason": "Ultimate Saber mampu mengunci dan membunuh Aamon sebelum sempat menghilang."
+      "reason": "Ultimate lock menghilangkan kesempatan Aamon melakukan outplay."
+    },
+    {
+      "hero": "Khufra",
+      "reason": "Crowd control kuat membuat Aamon sulit masuk ke backline."
     },
     {
       "hero": "Kaja",
-      "reason": "Divine Judgment dapat menarik Aamon meskipun memiliki mobilitas tinggi."
-    },
-    {
-      "hero": "Franco",
-      "reason": "Hook dan Bloody Hunt sangat efektif menghentikan Aamon."
+      "reason": "Suppress dapat langsung menangkap Aamon meski sedang berusaha kabur."
     }
   ],
 
   "counter_items": [
     {
-      "item": "Athena's Shield",
-      "reason": "Mengurangi burst Magic Damage Aamon secara signifikan."
+      "item": "Radiant Armor",
+      "reason": "Mengurangi burst magic Aamon secara signifikan."
     },
     {
-      "item": "Radiant Armor",
-      "reason": "Efektif melawan damage magic bertahap dari skill Aamon."
+      "item": "Athena's Shield",
+      "reason": "Efektif menahan combo pertama Aamon."
     },
     {
       "item": "Winter Crown",
-      "reason": "Dapat menghindari combo burst Aamon."
+      "reason": "Menghindari damage ultimate Aamon."
     }
   ],
 
   "counter_spells": [
     {
-      "spell": "Flicker",
-      "reason": "Membantu keluar dari jangkauan combo Aamon."
+      "spell": "Purify",
+      "reason": "Membantu keluar dari slow sebelum combo selesai."
     },
     {
-      "spell": "Purify",
-      "reason": "Membantu bertahan saat terkena inisiasi."
+      "spell": "Flicker",
+      "reason": "Kabur dari jangkauan shard Aamon."
     }
   ],
 
   "counter_emblems": [
     {
       "emblem": "Tank",
-      "reason": "Memberikan ketahanan lebih terhadap burst magic."
-    },
-    {
-      "emblem": "Support",
-      "reason": "Memberikan sustain dan utility saat teamfight."
+      "reason": "Memberikan durability lebih tinggi melawan burst magic."
     }
   ],
 
   "recommended_pick": [
+    "Khufra",
     "Saber",
     "Kaja",
     "Franco",
-    "Chou"
+    "Natalia"
   ],
 
   "avoid_pick": [
     "Layla",
-    "Lesley",
-    "Hanabi"
+    "Hanabi",
+    "Cecilion"
   ],
 
   "ban_priority": "Medium",
 
   "strengths": [
-    "Burst damage sangat tinggi",
-    "Mobilitas tinggi",
-    "Sulit ditarget saat camouflage",
-    "Mudah membunuh backline"
+    "Burst damage sangat tinggi.",
+    "Mobilitas tinggi.",
+    "Sulit ditarget saat camouflage.",
+    "Sangat kuat membunuh hero tipis."
   ],
 
   "weaknesses": [
-    "Lemah terhadap suppress",
-    "Lemah terhadap hard crowd control",
-    "Kurang efektif melawan hero tebal dengan Magic Defense"
+    "Lemah terhadap hard crowd control.",
+    "Sulit melawan hero tebal.",
+    "Kurang efektif saat tertinggal gold."
   ],
 
-  "early_game": "Prioritaskan farming hingga level 4, lalu lakukan gank ke Gold Lane atau Mid Lane.",
+  "early_game": "Fokus farming hingga level 4 lalu lakukan gank ke Gold Lane.",
 
-  "mid_game": "Manfaatkan mobilitas untuk mencari pick off terhadap Mage atau Marksman lawan.",
+  "mid_game": "Cari pick-off sebelum teamfight dimulai.",
 
-  "late_game": "Masuk teamfight setelah Tank membuka war dan incar hero core lawan.",
+  "late_game": "Target utama adalah Mage atau Marksman. Hindari membuka war terlebih dahulu.",
 
-  "combo_counter": "Gunakan suppress atau hard crowd control sebelum Aamon sempat menggunakan skill untuk menghilang.",
+  "combo_counter": "Gunakan hero dengan suppress atau stun instan sebelum Aamon mengaktifkan camouflage.",
 
-  "positioning": "Jangan berjalan sendirian dan tetap berada di dekat Tank ketika Aamon belum terlihat di map.",
+  "positioning": "Jangan berjalan sendirian. Berdiri dekat Tank atau Roamer.",
 
-  "teamfight": "Fokus melindungi Marksman dan Mage dari flank Aamon.",
+  "teamfight": "Paksa Aamon muncul lebih dulu, lalu gunakan crowd control sebelum ia mengeluarkan seluruh combo.",
 
   "tips": [
-    "Gunakan Athena's Shield jika lawan memiliki Aamon yang kuat.",
-    "Simpan skill crowd control untuk menghentikan Aamon.",
-    "Waspadai serangan dari semak-semak."
+    "Selalu cek semak sebelum farming.",
+    "Build Magic Defense jika Aamon snowball.",
+    "Jangan berjalan sendiri ketika vision hilang."
   ],
 
-  "notes": "Knowledge ini disusun berdasarkan pengalaman bermain ranked, komunitas MLBB, serta gameplay kompetitif dan dapat berubah mengikuti patch."
+  "notes": "Power spike terbesar setelah mendapatkan level 4 dan dua item magic."
 },
+
+  {
+  "hero": "Akai",
+
+  "role": "Tank",
+
+  "lane": "Roam/Jungle",
+
+  "difficulty": "Medium",
+
+  "counter_heroes": [
+    {
+      "hero": "Diggie",
+      "reason": "Ultimate Diggie menghilangkan efek crowd control dari Hurricane Dance."
+    },
+    {
+      "hero": "Valir",
+      "reason": "Knockback membuat Akai sulit masuk."
+    },
+    {
+      "hero": "Karrie",
+      "reason": "True Damage cepat menghabisi Akai."
+    }
+  ],
+
+  "counter_items": [
+    {
+      "item": "Demon Hunter Sword",
+      "reason": "Efektif melawan HP tebal Akai."
+    },
+    {
+      "item": "Sea Halberd",
+      "reason": "Mengurangi efek regen."
+    }
+  ],
+
+  "counter_spells": [
+    {
+      "spell": "Purify",
+      "reason": "Mengurangi efek lock dari ultimate."
+    }
+  ],
+
+  "counter_emblems": [
+    {
+      "emblem": "Marksman",
+      "reason": "Damage DPS tinggi lebih efektif melawan Tank."
+    }
+  ],
+
+  "recommended_pick": [
+    "Diggie",
+    "Karrie",
+    "Valir",
+    "Claude"
+  ],
+
+  "avoid_pick": [
+    "Layla",
+    "Lesley"
+  ],
+
+  "ban_priority": "Low",
+
+  "strengths": [
+    "Peel sangat kuat.",
+    "Objektif Turtle dan Lord aman.",
+    "Initiator terbaik."
+  ],
+
+  "weaknesses": [
+    "Sangat bergantung pada ultimate.",
+    "Lemah terhadap Purify dan Diggie."
+  ],
+
+  "early_game": "Ganggu jungle lawan dan amankan objektif.",
+
+  "mid_game": "Cari pick-off menggunakan Flicker Ultimate.",
+
+  "late_game": "Lindungi Marksman sendiri atau lock core lawan.",
+
+  "combo_counter": "Gunakan Diggie Ultimate saat Akai memulai Hurricane Dance.",
+
+  "positioning": "Jangan berdiri dekat dinding ketika melawan Akai.",
+
+  "teamfight": "Sebar posisi agar tidak terdorong bersamaan.",
+
+  "tips": [
+    "Hindari war di area sempit.",
+    "Selalu simpan Purify jika ada Akai."
+  ],
+
+  "notes": "Sangat kuat sebagai roamer kompetitif."
+},
+
+{
+  "hero": "Alice",
+
+  "role": "Mage",
+
+  "lane": "EXP/Mid",
+
+  "difficulty": "Medium",
+
+  "counter_heroes": [
+    {
+      "hero": "Karrie",
+      "reason": "True Damage menghabisi HP tebal Alice."
+    },
+    {
+      "hero": "Valir",
+      "reason": "Knockback menghentikan Alice masuk."
+    },
+    {
+      "hero": "Baxia",
+      "reason": "Mengurangi regen ultimate."
+    }
+  ],
+
+  "counter_items": [
+    {
+      "item": "Necklace of Durance",
+      "reason": "Mengurangi spell vamp."
+    },
+    {
+      "item": "Sea Halberd",
+      "reason": "Mengurangi lifesteal."
+    },
+    {
+      "item": "Dominance Ice",
+      "reason": "Mengurangi regen Alice."
+    }
+  ],
+
+  "counter_spells": [
+    {
+      "spell": "Purify",
+      "reason": "Keluar dari crowd control Alice."
+    }
+  ],
+
+  "counter_emblems": [
+    {
+      "emblem": "Tank",
+      "reason": "Lebih tahan terhadap magic damage Alice."
+    }
+  ],
+
+  "recommended_pick": [
+    "Baxia",
+    "Karrie",
+    "Valir",
+    "Lunox"
+  ],
+
+  "avoid_pick": [
+    "Hanabi",
+    "Layla"
+  ],
+
+  "ban_priority": "Low",
+
+  "strengths": [
+    "Sustain tinggi.",
+    "Scaling kuat.",
+    "Sulit dibunuh."
+  ],
+
+  "weaknesses": [
+    "Lemah di early game.",
+    "Bergantung stack."
+  ],
+
+  "early_game": "Farm stack sebanyak mungkin.",
+
+  "mid_game": "Mulai ikut teamfight setelah memiliki item sustain.",
+
+  "late_game": "Masuk ke tengah war untuk menyerap damage.",
+
+  "combo_counter": "Gunakan Anti Heal sebelum Alice aktifkan ultimate.",
+
+  "positioning": "Jaga jarak dan jangan biarkan Alice mengenai banyak target.",
+
+  "teamfight": "Fokus burst sebelum Alice sempat sustain.",
+
+  "tips": [
+    "Selalu beli Anti Heal.",
+    "Jangan bergerombol."
+  ],
+
+  "notes": "Semakin lama permainan, Alice semakin kuat."
+},
+
+{
+  "hero": "Angela",
+
+  "role": "Support",
+
+  "lane": "Roam",
+
+  "difficulty": "Easy",
+
+  "counter_heroes": [
+    {
+      "hero": "Diggie",
+      "reason": "Ultimate Diggie menghilangkan efek immobilize Angela."
+    },
+    {
+      "hero": "Baxia",
+      "reason": "Pasif Baxia mengurangi heal dari Angela."
+    },
+    {
+      "hero": "Natalia",
+      "reason": "Mudah mengincar Angela yang memiliki HP tipis."
+    }
+  ],
+
+  "counter_items": [
+    {
+      "item": "Dominance Ice",
+      "reason": "Mengurangi healing Angela."
+    },
+    {
+      "item": "Sea Halberd",
+      "reason": "Efek Anti Heal sangat efektif."
+    },
+    {
+      "item": "Necklace of Durance",
+      "reason": "Counter terbaik terhadap sustain Angela."
+    }
+  ],
+
+  "counter_spells": [
+    {
+      "spell": "Purify",
+      "reason": "Menghilangkan efek immobilize Skill 2."
+    }
+  ],
+
+  "counter_emblems": [
+    {
+      "emblem": "Tank",
+      "reason": "Lebih tahan terhadap poke Angela."
+    }
+  ],
+
+  "recommended_pick": [
+    "Baxia",
+    "Natalia",
+    "Diggie",
+    "Saber"
+  ],
+
+  "avoid_pick": [
+    "Layla",
+    "Hanabi"
+  ],
+
+  "ban_priority": "Low",
+
+  "strengths": [
+    "Healing tinggi.",
+    "Global Ultimate.",
+    "Support terbaik untuk hyper carry."
+  ],
+
+  "weaknesses": [
+    "HP sangat tipis.",
+    "Tidak memiliki escape."
+  ],
+
+  "early_game": "Roaming membantu Gold Lane dan menjaga vision.",
+
+  "mid_game": "Tempel ke core yang sedang snowball.",
+
+  "late_game": "Prioritaskan Ultimate kepada damage dealer utama.",
+
+  "combo_counter": "Gunakan Anti Heal sebelum fokus hero yang ditempeli Angela.",
+
+  "positioning": "Cari Angela terlebih dahulu sebelum membunuh core lawan.",
+
+  "teamfight": "Paksa Angela menggunakan Ultimate terlalu cepat.",
+
+  "tips": [
+    "Selalu beli Anti Heal.",
+    "Burst Angela jika berada di belakang."
+  ],
+
+  "notes": "Angela jauh lebih kuat ketika dipasangkan dengan Fighter atau Assassin."
+},
+
+{
+  "hero": "Alpha",
+
+  "role": "Fighter",
+
+  "lane": "EXP/Jungle",
+
+  "difficulty": "Easy",
+
+  "counter_heroes": [
+    {
+      "hero": "Karrie",
+      "reason": "True Damage menghabisi Alpha yang tebal."
+    },
+    {
+      "hero": "Valir",
+      "reason": "Knockback membuat Alpha sulit mendekat."
+    },
+    {
+      "hero": "Baxia",
+      "reason": "Mengurangi spell vamp Alpha."
+    }
+  ],
+
+  "counter_items": [
+    {
+      "item": "Dominance Ice",
+      "reason": "Mengurangi sustain."
+    },
+    {
+      "item": "Sea Halberd",
+      "reason": "Anti Heal efektif."
+    },
+    {
+      "item": "Necklace of Durance",
+      "reason": "Mengurangi regenerasi."
+    }
+  ],
+
+  "counter_spells": [
+    {
+      "spell": "Purify",
+      "reason": "Menghindari efek stun Ultimate."
+    }
+  ],
+
+  "counter_emblems": [
+    {
+      "emblem": "Tank",
+      "reason": "Lebih kuat menahan true damage Beta."
+    }
+  ],
+
+  "recommended_pick": [
+    "Valir",
+    "Karrie",
+    "Baxia",
+    "Yu Zhong"
+  ],
+
+  "avoid_pick": [
+    "Balmond",
+    "Terizla"
+  ],
+
+  "ban_priority": "Low",
+
+  "strengths": [
+    "Sustain tinggi.",
+    "True Damage.",
+    "Teamfight kuat."
+  ],
+
+  "weaknesses": [
+    "Mudah di-kite.",
+    "Sangat bergantung skill."
+  ],
+
+  "early_game": "Main agresif setelah level 4.",
+
+  "mid_game": "Fokus objektif dan war kecil.",
+
+  "late_game": "Masuk setelah Tank membuka war.",
+
+  "combo_counter": "Kurangi heal Alpha menggunakan Anti Heal.",
+
+  "positioning": "Jangan berdiri sejajar dengan core.",
+
+  "teamfight": "CC Alpha sebelum Ultimate mengenai banyak hero.",
+
+  "tips": [
+    "Gunakan hero dengan poke.",
+    "Jangan duel lama."
+  ],
+
+  "notes": "Alpha sangat kuat ketika mendapatkan War Axe lebih awal."
+},
+
+{
+  "hero": "Aldous",
+
+  "role": "Fighter",
+
+  "lane": "EXP",
+
+  "difficulty": "Medium",
+
+  "counter_heroes": [
+    {
+      "hero": "Kaja",
+      "reason": "Suppress menghentikan Aldous."
+    },
+    {
+      "hero": "Franco",
+      "reason": "Hook dan suppress mematikan."
+    },
+    {
+      "hero": "Valir",
+      "reason": "Knockback membuat Aldous sulit mendekat."
+    }
+  ],
+
+  "counter_items": [
+    {
+      "item": "Wind of Nature",
+      "reason": "Menahan Basic Attack Aldous."
+    },
+    {
+      "item": "Winter Crown",
+      "reason": "Menghindari combo."
+    },
+    {
+      "item": "Blade Armor",
+      "reason": "Mengurangi damage Basic Attack."
+    }
+  ],
+
+  "counter_spells": [
+    {
+      "spell": "Flicker",
+      "reason": "Kabur dari serangan."
+    }
+  ],
+
+  "counter_emblems": [
+    {
+      "emblem": "Tank",
+      "reason": "Lebih tahan terhadap burst."
+    }
+  ],
+
+  "recommended_pick": [
+    "Kaja",
+    "Franco",
+    "Valir",
+    "Ruby"
+  ],
+
+  "avoid_pick": [
+    "Layla",
+    "Lesley"
+  ],
+
+  "ban_priority": "Low",
+
+  "strengths": [
+    "Late game sangat kuat.",
+    "Burst tinggi.",
+    "Ultimate global."
+  ],
+
+  "weaknesses": [
+    "Lemah early game.",
+    "Bergantung stack."
+  ],
+
+  "early_game": "Fokus stack.",
+
+  "mid_game": "Split push dan cari kill.",
+
+  "late_game": "Prioritaskan Marksman atau Mage.",
+
+  "combo_counter": "Invade sejak early agar stack Aldous terlambat.",
+
+  "positioning": "Selalu dekat Tank.",
+
+  "teamfight": "Paksa Aldous menyerang Tank.",
+
+  "tips": [
+    "Jangan biarkan farming bebas.",
+    "Gunakan hero CC."
+  ],
+
+  "notes": "Jika stack Aldous rendah sampai menit 10, impact-nya menurun drastis."
+},
+
 
   {
   "hero": "",
