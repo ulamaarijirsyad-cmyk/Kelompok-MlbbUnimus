@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/marketplace.css">
+    <link rel="stylesheet" href="css/cart.css">
   </head>
 
   <body>
@@ -25,7 +26,10 @@
       <div class="navbar-icon">
         <a href="#" id="search">
           <i data-feather="search"></i></a>
-        <a href="#" id="cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="cart">
+          <i data-feather="shopping-cart"></i>
+          <span id="cartBadge" class="cart-badge" hidden>0</span>
+        </a>
       </div>
     </nav>
 
@@ -163,6 +167,29 @@
           <button class="btn-cancel" onclick="closeForm()">Batal</button>
           <button class="btn-submit" onclick="uploadPost()">
             Upload Listing
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL CART -->
+    <div class="modal-overlay" id="cartOverlay">
+      <div class="modal-box cart-box">
+        <h3><i data-feather="shopping-cart"></i> Keranjang Belanja</h3>
+
+        <div id="cartList" class="cart-list">
+          <!-- diisi otomatis oleh marketplace.js -->
+        </div>
+
+        <div class="cart-summary">
+          <span>Total</span>
+          <span id="cartTotal">Rp 0</span>
+        </div>
+
+        <div class="modal-actions">
+          <button class="btn-cancel" onclick="closeCart()">Tutup</button>
+          <button class="btn-submit" onclick="checkoutCart()">
+            Checkout
           </button>
         </div>
       </div>
